@@ -40,7 +40,7 @@ pipeline {
           stage('Deploy To Docker Server Using SSH') {
                steps{
                     script {
-                         sshCommand remote: remote, command: "docker run --name olivia-docker-class2 -d -p 9090:80 seyiniceman/zenithproject-class:3"
+                         sshCommand remote: remote, command: "docker run --name olivia-docker-class2 -d -p 9090:80 seyiniceman/zenithproject:latest"
                     }
                }
           }
